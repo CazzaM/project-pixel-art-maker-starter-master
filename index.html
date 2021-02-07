@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pixel Art Maker!</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Pixel Art Maker</h1>
+
+        <h2>Please choose the grid size</h2>
+        <!--
+        A form was used so that the desired height and width can be entered
+        by the user before clicking the submit button.
+        -->
+        <form id="sizePicker">
+            Grid Rows:
+            <input type="number" id="inputHeight" name="height" min="1" value="1">
+            Grid Columns:
+            <input type="number" id="inputWidth" name="width" min="1" value="1">
+            <input type="submit">
+        </form>
+
+        <!--
+        A colour picker so that the user can select the desired background
+        colour that they would like to paint with in the grid. Changed the
+        default colour of the colour picker when first loaded to white
+        instead of black.
+        -->
+        <h2>Please pick a colour</h2>
+        <input type="color" id="colorPicker" value="#ffffff">
+
+        <!--
+        This is where the table is declared. The table is used in javascript
+        to create the rows and cells.
+        -->
+        <h2>Design Canvas</h2>
+        <!-- Warning to the user that if they click the same cell twice,
+        it will undo the color that they chose.
+        -->
+        <p>Selecting a coloured cell again, erases the color</p>
+        <table id="pixelCanvas"></table>
+
+        <!--
+        Links javascript to this html document. Declared here so that
+        the html tags are available when the javascript code is run.
+        -->
+        <script src="designs.js"></script>
+    </body>
+</html>
